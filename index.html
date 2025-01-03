@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Leckerli+One&family=Lobster&family=MonteCarlo&family=Oooh+Baby&family=Playwrite+CO+Guides&family=Playwrite+CO:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- exam , header  -->
+    <section id="exam-main"></section>
+    <!-- end of exam , header  -->
+
+    <!-- progress -->
+    <section id="results">
+        <div id="progress"></div>
+    </section>
+    <!-- end of progress -->
+
+    <!-- start of popup  -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop='static'>
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 mt-3">
+                    <h5 class="modal-title text-center w-100" id="exampleModalLabel">Enter Your Name</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="nameForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="nameInput" placeholder="Enter your name"
+                                required>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center border-0 mb-3">
+                    <button type="button" id="submitButton" class="btn btn-dark" disabled
+                        onclick="submitForm()">Start</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end of popup -->
+    <!-- scripts  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.tutorialjinni.com/progressbar.js/1.1.1/progressbar.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

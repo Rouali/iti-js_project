@@ -1,0 +1,119 @@
+* {
+  font-family: "Playwrite CO", serif;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+}
+
+/* questions */
+#exam-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 100px;
+  padding: 40px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.question-title {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.question-image {
+  width: 250px;
+  margin-bottom: 25px;
+}
+
+.answers-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.answer-btn {
+  padding: 10px;
+  font-size: 15px;
+  width: 250px;
+  background-color: rgb(243, 242, 242);
+  color: black;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.answer-btn:hover {
+  background-color: #616365;
+  color: white;
+}
+
+.answer-btn.active {
+  background-color: #616365;
+  color: white;
+}
+
+.nextBtn {
+  padding: 10px;
+  font-size: 15px;
+  width: 100px;
+  background-color: rgb(243, 242, 242);
+  color: black;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+  margin-left: 350px;
+}
+
+.nextBtn:hover {
+  background-color: #616365;
+  color: white;
+}
+
+.nextBtn.disabled {
+  background-color: rgb(243, 242, 242);
+  color: black;
+  cursor: not-allowed;
+}
+
+/* timer_name  */
+.top-bar {
+  padding: 20px 20px 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: fixed;
+  background-color: #f7f7f7;
+}
+
+/* progress */
+#results {
+  height: calc(100vh - 76px);
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+#progress {
+  width: 200px;
+}
