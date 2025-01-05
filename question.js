@@ -22,18 +22,13 @@ export default class Question {
         for (let i = 0; i < this.question.answers.length; i++) {
             let answerBtn = document.createElement("button");
             answerBtn.classList.add("answer-btn");
-            answerBtn.value = this.question.answers[i].title;
             answerBtn.textContent = this.question.answers[i].title;
-            answerBtn.name = "answer";
-            answerBtn.id = `answer-${i}`;
             answersContainer.appendChild(answerBtn);
 
             answerBtn.addEventListener('click', () => {
                 this.isAnswered = true;
                 document.querySelector('.nextBtn').classList.remove('disabled');
-                for (let i = 0; i < this.question.answers.length; i++) {
-                    this.question.answers[i].isSelected = false;
-                }
+                this.question.answers.forEach(answer => answer.isSelected = false);
 
                 this.question.answers[i].isSelected = true;
 
@@ -50,8 +45,6 @@ export default class Question {
         container.appendChild(answersContainer);
         let examSection = document.querySelector("#exam-main");
         examSection.appendChild(container);
-
-
 
         const answerBtns = document.querySelectorAll('.answer-btn');
         answerBtns.forEach(btn => {
