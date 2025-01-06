@@ -135,12 +135,12 @@ const examQuestions = [
         answers: [
             {
                 title: "Amazon River",
-                isCorrect: true,
+                isCorrect: false,
                 isSelected: false
             },
             {
                 title: "Nile River",
-                isCorrect: false,
+                isCorrect: true,
                 isSelected: false
             },
             {
