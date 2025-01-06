@@ -48,14 +48,10 @@ export default class Exam {
         const array = Array.from(questions);
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            const temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
+            [array[i], array[j]] = [array[j] ,array[i]];
             for (let x = array[i].answers.length - 1; x > 0; x--) {
                 const y = Math.floor(Math.random() * (x + 1));
-                const temp = array[i].answers[x];
-                array[i].answers[x] = array[i].answers[y];
-                array[i].answers[y] = temp;
+                [array[i].answers[x] , array[i].answers[y]] = [array[i].answers[y] , array[i].answers[x]];
             }
         }
         return array;
